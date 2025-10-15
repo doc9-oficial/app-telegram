@@ -1,0 +1,27 @@
+{
+    "name": "telegram-app",
+    "version": "1.0.0",
+    "description": "Aplicação para envio de mensagens via Telegram",
+    "main": "dist/enviarMensagem.js",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "clean": "rm -rf dist"
+    },
+    "keywords": [
+        "telegram",
+        "mensagens",
+        "comunicacao",
+        "bot",
+        "docgo"
+    ],
+    "author": "DocGo",
+    "license": "MIT",
+    "dependencies": {
+        "docgo-sdk": "file:../../sdk-js"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "typescript": "^5.0.0"
+    }
+}

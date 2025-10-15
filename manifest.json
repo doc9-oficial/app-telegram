@@ -1,0 +1,125 @@
+{
+    "name": "telegram",
+    "version": "1.0.0",
+    "description": "Aplicação para envio de mensagens via Telegram",
+    "auth": {
+        "description": {
+            "title": "Autenticação via Token do Bot do Telegram",
+            "body": "Para utilizar esta aplicação, você precisa criar um bot no Telegram e obter o token de autenticação. Siga os passos abaixo:\n\n1. Abra o Telegram e procure pelo usuário @BotFather.\n2. Inicie uma conversa e envie o comando /newbot.\n3. Siga as instruções para nomear seu bot e escolher um username único.\n4. Após a criação, o BotFather fornecerá um token de API. Copie esse token.\n5. Cole o token no campo abaixo para autenticar a aplicação.",
+            "footer": "",
+            "link": "https://core.telegram.org/bots#6-botfather"
+        },
+        "params": [
+            {
+                "name": "botToken",
+                "type": "string",
+                "inputType": "text",
+                "required": true
+            }
+        ]
+    },
+    "functions": {
+        "enviarMensagem": {
+            "name": "Enviar mensagem - Telegram",
+            "script": "dist/enviarMensagem.js",
+            "description": "Envia uma mensagem via Telegram",
+            "category": "comunicacao",
+            "values": {
+                "chatId": "",
+                "mensagem": "",
+                "parseMode": "",
+                "replyToMessageId": null,
+                "disableWebPagePreview": false,
+                "disableNotification": false
+            },
+            "params": [
+                {
+                    "name": "chatId",
+                    "type": "string",
+                    "inputType": "text",
+                    "required": true,
+                    "label": "ID do Chat"
+                },
+                {
+                    "name": "mensagem",
+                    "type": "string",
+                    "inputType": "text",
+                    "required": true,
+                    "label": "Mensagem"
+                },
+                {
+                    "name": "parseMode",
+                    "type": "string",
+                    "inputType": "select",
+                    "required": false,
+                    "label": "Modo de formatação da mensagem",
+                    "options": [
+                        {
+                            "label": "Texto simples",
+                            "value": ""
+                        },
+                        {
+                            "label": "HTML",
+                            "value": "HTML"
+                        },
+                        {
+                            "label": "Markdown",
+                            "value": "Markdown"
+                        },
+                        {
+                            "label": "Markdown V2",
+                            "value": "MarkdownV2"
+                        }
+                    ]
+                },
+                {
+                    "name": "replyToMessageId",
+                    "type": "number",
+                    "inputType": "number",
+                    "required": false,
+                    "label": "Responder à mensagem (ID da mensagem)"
+                },
+                {
+                    "name": "disableWebPagePreview",
+                    "type": "boolean",
+                    "inputType": "select",
+                    "required": false,
+                    "label": "Desabilitar visualização de link",
+                    "options": [
+                        {
+                            "label": "Sim",
+                            "value": true
+                        },
+                        {
+                            "label": "Não",
+                            "value": false
+                        }
+                    ]
+                },
+                {
+                    "name": "disableNotification",
+                    "type": "boolean",
+                    "inputType": "select",
+                    "required": false,
+                    "label": "Enviar sem notificação",
+                    "options": [
+                        {
+                            "label": "Sim",
+                            "value": true
+                        },
+                        {
+                            "label": "Não",
+                            "value": false
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "config": {
+        "timeout": 30000,
+        "max_retries": 3,
+        "cache_ttl": 0
+    },
+    "mcp": true
+}
