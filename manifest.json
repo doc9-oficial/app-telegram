@@ -21,6 +21,7 @@
     "functions": {
         "enviarMensagem": {
             "name": "Enviar mensagem - Telegram",
+            "icon": "AtSign",
             "script": "dist/enviarMensagem.js",
             "description": "Envia uma mensagem via Telegram",
             "category": "comunicacao",
