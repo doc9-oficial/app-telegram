@@ -21,3 +21,5 @@ npx tsc
 
 echo "✅ Build completed successfully!"
 echo "📁 Output: dist/"
+
+touch .build_complete
