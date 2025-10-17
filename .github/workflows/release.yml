@@ -13,11 +13,6 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Build app
-        run: |
-          chmod +x build.sh
-          ./build.sh
-
       - name: Criar ou atualizar tag 'latest'
         run: |
           git config user.name "github-actions[bot]"
